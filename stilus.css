@@ -103,7 +103,7 @@ nav li:hover{
     
   }
 /*Mobil nézet- reszponzivitás kialakítása. */
-@media only screen and (max-width: 400px) {/*töréspont*/
+@media only screen and (max-width: 500px) {/*töréspont*/
     body, main {
       width: 100%;
     }

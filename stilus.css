@@ -103,7 +103,7 @@ nav li:hover{
     
   }
 /*Mobil nézet- reszponzivitás kialakítása. */
-@media only screen and (max-width: 500px) {/*töréspont*/
+@media only screen and (max-width: 420px) {/*töréspont*/
     body, main {
       width: 100%;
     }
@@ -121,7 +121,7 @@ nav li:hover{
     nav ul{
         grid-template-columns: 1fr;
         gap: 5px;
-
+        width: 100%;
     }
     article{
         grid-template-columns: 1fr;

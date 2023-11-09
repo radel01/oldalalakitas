@@ -1,0 +1,129 @@
+/*Reszponzív weboldal*/
+*{
+    margin:0;
+    padding: 0;
+    /*Minden html elem külső és belső margóját 0-ra tesszük.*/
+    box-sizing: border-box; 
+    /*elem szélességébe beletartozik a padding és a border is. */
+
+}
+body {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background-image: url(kepek/hatter.png);
+}
+main{
+    background-color: hsl(0, 0%, 100%, 0.3);
+    /*Tároló, szülőelem*/
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "h h h"
+        "n n n"
+        "b a j"
+        "f f f";
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+article img{
+    height: 180px;
+    width: 180px;
+}
+/*Minden gyerekelemet elnevezünk! Fontos, hogy egy se maradjon ki! */
+header{
+    grid-area: h;
+}
+article{
+    grid-area: a;
+}
+nav{
+    grid-area: n;
+}
+footer{
+    grid-area: f;
+}
+aside#bal{
+    grid-area: b;
+}
+aside#jobb{
+    grid-area: j;
+}
+
+header, nav, article, footer, aside{
+    padding: 10px;
+    border: 1px solid white;
+    margin: 5px;
+}
+
+/*menü kialakítása*/
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px;
+    list-style-type: none;
+    text-align: center;
+    background-color: rgb(132, 101, 167, 0.8);
+}
+
+nav a{
+    text-decoration: none;
+    color:  white;
+}
+nav li{
+    padding: 5px;
+    border: 1px solid white;
+}
+nav li:hover{
+    color: rgb(132, 101, 167);
+    text-decoration: none;
+    background-color: hsl(0, 0%, 100%,0.5);
+}
+/*Tablet nézet- reszponzivitás kialakítása. */
+@media only screen and (max-width: 700px) {/*töréspont*/
+    body, main {
+      width: 100%;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "h"
+            "n"
+            "b"
+            "j"
+            "a"
+            "f";
+    }
+    article{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+  }
+/*Mobil nézet- reszponzivitás kialakítása. */
+@media only screen and (max-width: 450px) {/*töréspont*/
+    body, main {
+      width: 100%;
+    }
+    main{
+        font-size: 15px;
+        grid-template-columns:1fr;
+        grid-template-areas: 
+            "h"
+            "n"
+            "a"
+            "b"
+            "j"
+            "f";
+    }
+    nav ul{
+        grid-template-columns: 1fr;
+        gap: 5px;
+
+    }
+    article{
+        grid-template-columns: 1fr;
+    }
+  }

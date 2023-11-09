@@ -30,8 +30,8 @@ article{
     gap: 5px;
 }
 article img{
-    height: 180px;
-    width: 180px;
+    height: 30%;
+    width: 100%;
 }
 /*Minden gyerekelemet elnevezünk! Fontos, hogy egy se maradjon ki! */
 header{
@@ -103,7 +103,7 @@ nav li:hover{
     
   }
 /*Mobil nézet- reszponzivitás kialakítása. */
-@media only screen and (max-width: 450px) {/*töréspont*/
+@media only screen and (max-width: 400px) {/*töréspont*/
     body, main {
       width: 100%;
     }
